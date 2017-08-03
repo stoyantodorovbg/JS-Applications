@@ -1,0 +1,112 @@
+Lab: AJAX & jQuery AJAX
+Problems for in-class lab for the “JavaScript Applications” course @ SoftUni. Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/Compete/Index/357.
+1.	XHR (XmlHttpRequest)
+Your task is to write a JS function that loads a github repository asynchronously with AJAX. You should create an instance of XmlHttpRequest an attach an onreadystatechange event to it. (An EventHandler that is called whenever the readyState attribute changes). In your event handler when the readyState attribute reaches a value of 4 (it is ready), replcae the text content of a div element with id "res" with the value of the responseText property of the request. Do not format the response in any way. Submit your loadRepos function.
+ More on XmlHttpRequest.open()
+Skeleton
+xmlhttprequest-example.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XmlHttpRequest Example</title>
+    <script src="scripts/1.xhr.js"></script>
+</head>
+<body>
+<button onclick="loadRepos()">Load Repos</button>
+<div id="res"></div>
+<script>
+   function loadRepos() {
+      // TODO
+   }
+</script>
+</body>
+</html>
+Examples
+ 
+2.	AJAX Load
+Use jQuery to write a JS function that loads an online resource into a div with id "text". Make a request to "text.html" and replace the target div’s content with the returned HTML. Create the files ajax-load.html and text.html and place them in the same folder, so that your script can find the latter.
+Submit your loadTitle function.
+Skeleton
+ajax-load.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Load Example</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="text">
+    <h1>AJAX jQuery.load()</h1>
+    <button onclick="loadTitle()">Load Title</button>
+</div>
+</body>
+</html>
+
+text.html
+<h1>Voilla!</h1>
+<p>I am a text loaded with AJAX request</p>
+
+ajax-load.js
+function loadTitle() {
+  // TODO
+}
+Examples
+   
+3.	Github Repos
+Your task is to write a JS function that executes an AJAX request with jQuery and loads all user github repositories by a given username (taken from input field with id "username") into a list (each repository as a list-item) with id "repos". Use the properties full_name and html_url of the returned objects to create a link to each repo’s GitHub page. If an error occurs (like 404 “Not Found”), append to the list a list-item with text "Error" instead. Clear the contents of the list before any new content is appended. See the highlighted lines of the skeleton for formatting details of each list item. Submit your loadRepos function.
+Skeleton
+github-repos.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Repos</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+GitHub username:
+<input type="text" id="username" value="k1r1L" />
+<button onclick="loadRepos()">Load Repos</button>
+<ul id="repos">
+  <li>
+    <a href="{repo.html_url}">
+      {repo.full_name}
+    </a>
+  </li>
+</ul>
+<script>
+    function loadRepos() {
+        // AJAX call … 
+    }
+</script>
+</body>
+</html>
+Examples
+ 
+4.	Phonebook
+Use Firebase and jQuery to create a simple phonebook app. The user should be able to see all contacts, loaded from the server, create a new contact and delete any of the contacts. Use the lecture presentation for detailed instructions on this task. Place your code in a file called "phonebook.js", as shown in the skeleton. This task is not evaluated by the Judge, it is for practice only.
+Skeleton
+github-repos.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phonebook</title>
+</head>
+<body>
+  <h1>Phonebook</h1>
+  <ul id="phonebook"></ul>
+  <button id="btnLoad">Load</button>
+  <h2>Create Contact</h2>
+  Person: <input type="text" id="person" />
+  <br>
+  Phone: <input type="text" id="phone" />
+  <br>
+  <button id="btnCreate">Create</button>
+  <script src="phonebook.js"></script>
+</body>
+</html>
+Examples
+ 
