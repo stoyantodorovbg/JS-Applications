@@ -1,0 +1,22 @@
+{{> header}}
+<section id="viewSubmit">
+    <div class="submitArea">
+        <h1>Submit Link</h1>
+        <p>Please, fill out the form. A thumbnail image is not required.</p>
+    </div>
+    <div class="submitArea formContainer">
+        <form id="submitForm" class="submitForm" action="#/create" method="post">
+            <label>Link URL:</label>
+            <input id="submitUrl" name="url" value="" type="text">
+            <label>Link Title:</label>
+            <input id="submitTitle" name="title" value="" type="text">
+            <label>Link Thumbnail Image (optional):</label>
+            <input id="submitImage" name="image" value="" type="text">
+            <label>Comment (optional):</label>
+            <textarea id="submitComment" name="comment"></textarea>
+            <input id="btnSubmitPost" value="Submit" type="submit">
+        </form>
+    </div>
+</section>
+
+{{> footer}}

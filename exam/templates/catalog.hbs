@@ -1,0 +1,12 @@
+<section id="viewCatalog">
+    <div class="posts">
+        {{#if hasNoPosts}}
+                <h1>No posts in database</h1>
+        {{/if}}
+{{> header}}
+        {{#each posts}}
+        {{> post}}
+        {{/each}}
+{{> footer}}
+    </div>
+</section>

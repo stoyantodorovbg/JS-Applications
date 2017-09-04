@@ -1,0 +1,33 @@
+{{#if createdByUser}}
+<article class="post">
+    <div class="col rank">
+        <span>{{count}}</span>
+    </div>
+    <div class="col thumbnail">
+        <a href="{{url}}">
+            <img src="{{imageUrl}}">
+        </a>
+    </div>
+    <div class="post-content">
+        <div class="title">
+            <a href="{{url}}">
+                {{title}}
+            </a>
+        </div>
+        <div class="details">
+            <div class="info">
+                submitted {{created}} days ago by {{author}}
+            </div>
+            <div class="controls">
+                <ul>
+                    <li class="action"><a class="commentsLink" href="#/comments">comments</a></li>
+                    <li class="action"><a class="editLink" href="#">edit</a></li>
+                    <li class="action"><a class="deleteLink" href="#">delete</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+</article>
+{{/if}}
