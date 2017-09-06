@@ -1,0 +1,9 @@
+{{#each products}}
+    <tr>
+        <th>{{product.name}}</th>
+        <th>{{product.description}}</th>
+        <th>{{quantity}}</th>
+        <th>{{product.price}}</th>
+        <th><button class="purchase" action="#/buy" data-id="{{_id}}">Purchase</button></th>
+    </tr>
+{{/each}}
